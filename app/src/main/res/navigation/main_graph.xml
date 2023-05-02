@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.sheniv.flowers.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/plantsInPotsFragment"
+        android:name="com.sheniv.flowers.fragments.PlantsInPotsFragment"
+        android:label="fragment_plants_in_pots"
+        tools:layout="@layout/fragment_plants_in_pots" />
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.sheniv.flowers.fragments.CatalogFragment"
+        android:label="fragment_catalog"
+        tools:layout="@layout/fragment_catalog" />
+    <fragment
+        android:id="@+id/aboutCompanyFragment"
+        android:name="com.sheniv.flowers.fragments.AboutCompanyFragment"
+        android:label="fragment_about_company"
+        tools:layout="@layout/fragment_about_company" />
+    <fragment
+        android:id="@+id/businessGiftsFragment"
+        android:name="com.sheniv.flowers.fragments.BusinessGiftsFragment"
+        android:label="fragment_business_gifts"
+        tools:layout="@layout/fragment_business_gifts" />
+    <fragment
+        android:id="@+id/followUsOnInstagramFragment"
+        android:name="com.sheniv.flowers.fragments.FollowUsOnInstagramFragment"
+        android:label="fragment_follow_us_on_instagram"
+        tools:layout="@layout/fragment_follow_us_on_instagram" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.sheniv.flowers.fragments.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
+</navigation>

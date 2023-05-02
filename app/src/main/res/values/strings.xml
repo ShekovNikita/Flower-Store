@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Flowers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="flowers_gifts"><![CDATA[Flowers&Gifts]]></string>
+    <string name="huy">Хуй</string>
+    <string name="pizda">Пизда</string>
+    <string name="about_adress"><![CDATA[Flowers and Gifts LLC, UNP 112345678, registration No. 112345678 dated 07/05/2020, Minsk City Executive Committee, legal address: Republic of Belarus, Minsk, st. Kalvariyskaya, 21–114. The flowers&gifts.by online store is registered in the Commercial Register of the Republic of Belarus No. 123456 dated May 12, 2019. © 2020–2022 All rights reserved]]></string>
+</resources>
