@@ -38,7 +38,7 @@ class DevelopmentFragment : BaseFragment<FragmentDevelopmentBinding>() {
         developTelega.setOnClickListener {
             val userid = "nikitashekov"
             val tgintent = Intent(Intent.ACTION_VIEW,
-                Uri.parse("tg://openmessage?user_id=" + userid));
+                Uri.parse("https://t.me/$userid"));
             tgintent.setPackage("org.telegram.messenger");
             startActivity(tgintent);
         }
@@ -61,7 +61,7 @@ class DevelopmentFragment : BaseFragment<FragmentDevelopmentBinding>() {
         designTelega.setOnClickListener {
             val userid = "lemur8"
             val tgintent = Intent(Intent.ACTION_VIEW,
-                Uri.parse("tg://openmessage?user_id=" + userid));
+                Uri.parse("https://t.me/$userid"));
             tgintent.setPackage("org.telegram.messenger");
             startActivity(tgintent);
         }

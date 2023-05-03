@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.sheniv.flowers.R
 import com.sheniv.flowers.adapters.ViewPagerAdapter
 import com.sheniv.flowers.databinding.FragmentPlantsInPotsBinding
 import com.sheniv.flowers.fragments.BaseFragment
@@ -26,12 +27,20 @@ class PlantsInPotsFragment : BaseFragment<FragmentPlantsInPotsBinding>() {
         params.height = size
         viewPager2.layoutParams = params*/
 
-        viewPager2.adapter = ViewPagerAdapter(AllPlantsInPots().getPlantsInPots())
-        TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
+        val items = AllPlantsInPots().getPlantsInPots()
 
-        }.attach()
+        viewPager2.adapter = ViewPagerAdapter(items)
+
+        /*TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
+        }.attach()*/
 
         btnBack.setOnClickListener { navController.popBackStack() }
+
+        btnCatalog.setOnClickListener { navController.navigate(R.id.catalogFragment) }
+
+        btnRight.setOnClickListener { viewPager2.currentItem = 1 }
+
+        btnLeft.setOnClickListener { viewPager2.currentItem = 0 }
     }
 
 }

@@ -34,32 +34,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="> Alstroemeria"
-        android:textColor="#80000000"
+        android:textColor="#E45DAA2D"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/bread_crumb_1"
         app:layout_constraintStart_toEndOf="@+id/bread_crumb_2"
         app:layout_constraintTop_toTopOf="@+id/bread_crumb_1" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView8"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:background="#DDD9D6"
+        android:layout_height="0dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/alstroemeria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bread_crumb_1" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        app:tabIndicatorHeight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPager2"
+        app:tabBackground="@drawable/tab_pager_selector"
+        app:tabGravity="center" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/background_counter"
-        app:layout_constraintStart_toStartOf="@+id/appCompatImageView8"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView8">
+        app:layout_constraintStart_toStartOf="@+id/tab_layout"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/minus"
@@ -105,7 +114,7 @@
         android:layout_height="40dp"
         android:background="@drawable/background_buy"
         android:text="BUY"
-        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView8"
+        app:layout_constraintEnd_toEndOf="@+id/tab_layout"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 
     <com.google.android.material.button.MaterialButton
