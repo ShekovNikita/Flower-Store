@@ -9,13 +9,15 @@ import com.sheniv.flowers.databinding.ItemCatalogBinding
 import com.sheniv.flowers.models.CatalogItem
 
 class CatalogAdapter(
-    val listCatalog: ArrayList<CatalogItem>
+    val listCatalog: ArrayList<CatalogItem>,
+    val clickOnItem: ClickOnItem
 ): RecyclerView.Adapter<CatalogAdapter.CAVH>() {
     inner class CAVH(item: View) : RecyclerView.ViewHolder(item) {
         private val binding = ItemCatalogBinding.bind(item)
         fun bind(i: CatalogItem) = with(binding){
             image.setImageResource(i.image)
             name.text = i.name
+            itemView.setOnClickListener { clickOnItem.click(i) }
         }
     }
 

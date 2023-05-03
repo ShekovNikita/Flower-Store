@@ -40,4 +40,19 @@
         android:name="com.sheniv.flowers.fragments.ContactsFragment"
         android:label="fragment_contacts"
         tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/cardProductFragment"
+        android:name="com.sheniv.flowers.fragments.CardProductFragment"
+        android:label="fragment_card_product"
+        tools:layout="@layout/fragment_card_product" />
+    <fragment
+        android:id="@+id/deliveryCommonFragment"
+        android:name="com.sheniv.flowers.fragments.DeliveryCommonFragment"
+        android:label="fragment_delivery"
+        tools:layout="@layout/fragment_delivery_common" />
+    <fragment
+        android:id="@+id/developmentFragment"
+        android:name="com.sheniv.flowers.fragments.DevelopmentFragment"
+        android:label="fragment_development"
+        tools:layout="@layout/fragment_development" />
 </navigation>

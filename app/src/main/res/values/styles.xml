@@ -5,4 +5,9 @@
         <item name="android:textColor">#F1F0F2</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/arimo_bold</item>
+    </style>
 </resources>

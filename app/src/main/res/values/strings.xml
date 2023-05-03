@@ -5,5 +5,9 @@
     <string name="flowers_gifts"><![CDATA[Flowers&Gifts]]></string>
     <string name="huy">Хуй</string>
     <string name="pizda">Пизда</string>
-    <string name="about_adress"><![CDATA[Flowers and Gifts LLC, UNP 112345678, registration No. 112345678 dated 07/05/2020, Minsk City Executive Committee, legal address: Republic of Belarus, Minsk, st. Kalvariyskaya, 21–114. The flowers&gifts.by online store is registered in the Commercial Register of the Republic of Belarus No. 123456 dated May 12, 2019. © 2020–2022 All rights reserved]]></string>
+    <string name="about_adress">Flowers and Gifts LLC, UNP 142346678, registration No. 142346678 dated 06/09/2020, Minsk City Executive Committee, legal address: Republic of Belarus, Minsk, st. Sovetskay, 1–18. The <![CDATA[Flowers&Gifts]]>.by online store is registered in the Commercial Register of the Republic of Belarus No. 124456 dated May 19, 2019. © 2020–2022 All rights reserved</string>
+    <string name="minsk_st_kalvariyskaya"><![CDATA[Minsk, st. Sovetskay, 1–18  \nWorking hours: around the clock 24/7]]></string>
+    <string name="description_text">How to prolong the life of flowers: 8 working tips.\n\n 1. Trim flowers just before putting them in water. Through a fresh cut, water is better supplied to the buds and the bouquet will last longer. Trim the flowers with a sharp knife or secateurs at a 45-degree angle. When changing the water in the vase, trim ...</string>
+    <string name="learn_more"><u>Learn more</u></string>
+    <string name="about_description">We are confident in the freshness of our flowers, so we give a guarantee. If our bouquet withered within 2 days (this can happen with roses, peonies, hydrangeas, matthiolas - all delicate flowers), we will offer more resistant options to replace or bring the same ones from the next delivery.</string>
 </resources>

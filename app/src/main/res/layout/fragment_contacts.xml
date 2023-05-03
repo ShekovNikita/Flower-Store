@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="30dp"
+    android:paddingTop="50dp"
     android:background="#DDD9D6"
     android:paddingHorizontal="40dp"
     tools:context=".fragments.ContactsFragment">
@@ -13,20 +13,20 @@
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/arrow_back"
         android:paddingVertical="10dp"
         android:paddingEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        android:src="@drawable/arrow_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_back"
         app:layout_constraintStart_toEndOf="@+id/btn_back"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/btn_back">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/appCompatImageView2"
@@ -127,11 +127,11 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView6"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:lineHeight="20sp"
-        android:text="Minsk, st. Kalvariyskaya, 21–114 Working hours: around the clock 24/7"
+        android:text="@string/minsk_st_kalvariyskaya"
         app:fontFamily="@font/roboto"
         app:layout_constraintStart_toStartOf="@+id/appCompatImageView6"
         app:layout_constraintTop_toBottomOf="@+id/appCompatImageView6" />
@@ -142,6 +142,7 @@
         android:textSize="10sp"
         app:fontFamily="@font/roboto_thin"
         android:lineHeight="20sp"
+        android:layout_marginTop="20dp"
         android:text="@string/about_adress"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView6"
         tools:layout_editor_absoluteX="40dp" />

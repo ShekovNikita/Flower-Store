@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="40dp"
+    android:paddingTop="50dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.PlantsInPotsFragment">
 
@@ -11,9 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Plants in pots"/>
@@ -22,11 +24,11 @@
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:paddingEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/name"
-        android:src="@drawable/arrow_back"
-        android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toBottomOf="@id/name"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/arrow_back" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager2"

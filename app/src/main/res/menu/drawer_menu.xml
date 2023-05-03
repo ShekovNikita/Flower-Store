@@ -8,6 +8,7 @@
             android:id="@+id/main"
             android:icon="@drawable/logo"
             android:title="Main page" />
+
     </group>
 
     <item android:title="Order">
@@ -15,7 +16,7 @@
             <item
                 android:id="@+id/plants_in_post"
                 android:icon="@drawable/logo"
-                android:title="Plants in post" />
+                android:title="Plants in pots" />
 
             <item
                 android:id="@+id/catalog"
@@ -26,6 +27,11 @@
                 android:id="@+id/business_gifts"
                 android:icon="@drawable/logo"
                 android:title="Business gifts" />
+
+            <item
+                android:id="@+id/delivery"
+                android:icon="@drawable/logo"
+                android:title="Delivery" />
         </menu>
     </item>
 
@@ -35,15 +41,14 @@
                 android:id="@+id/about_us"
                 android:icon="@drawable/logo"
                 android:title="About company" />
-
             <item
                 android:id="@+id/follow_us"
                 android:icon="@drawable/logo"
                 android:title="Follow us" />
-            <item
+            <!--<item
                 android:id="@+id/contacts"
                 android:icon="@drawable/logo"
-                android:title="Contacts" />
+                android:title="Contacts" />-->
         </menu>
     </item>
 </menu>

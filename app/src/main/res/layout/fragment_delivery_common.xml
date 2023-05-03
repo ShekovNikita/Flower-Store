@@ -3,11 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F0F0"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingHorizontal="40dp"
     android:paddingTop="50dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.CatalogFragment">
+    tools:context=".fragments.DeliveryCommonFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/btn_back"
@@ -19,26 +18,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Catalog"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_back" />
+        app:tabMode="fixed"
+        app:tabTextColor="#80000000"
+        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabSelectedTextColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_catalog"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layoutAnimation="@anim/layout_animation_task"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_back"
-        tools:itemCount="4"
-        tools:listitem="@layout/item_plants" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

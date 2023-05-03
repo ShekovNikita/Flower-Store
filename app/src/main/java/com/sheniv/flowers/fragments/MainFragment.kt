@@ -32,6 +32,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>(),
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+        btnDevelopment.setOnClickListener { navController.navigate(R.id.developmentFragment) }
+
         catalog.setOnClickListener { navController.navigate(R.id.catalogFragment) }
     }
 
@@ -45,7 +47,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>(),
                 R.id.business_gifts -> navController.navigate(R.id.businessGiftsFragment)
                 R.id.about_us -> navController.navigate(R.id.aboutCompanyFragment)
                 R.id.follow_us -> navController.navigate(R.id.followUsOnInstagramFragment)
-                R.id.contacts -> navController.navigate(R.id.contactsFragment)
+                //R.id.contacts -> navController.navigate(R.id.contactsFragment)
+                R.id.delivery -> navController.navigate(R.id.deliveryCommonFragment)
             }
         }
 
