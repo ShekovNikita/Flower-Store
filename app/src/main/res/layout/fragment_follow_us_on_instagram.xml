@@ -12,7 +12,7 @@
         android:id="@+id/materialTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Follow us on \nInstagram"
+        android:text="Our Instagram"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btn_back"
@@ -24,89 +24,74 @@
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:paddingVertical="20dp"
         android:paddingEnd="20dp"
         android:src="@drawable/arrow_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView3"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/follow_us_1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/materialTextView">
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView4"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/follow_us_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView3" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/appCompatImageView3"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/follow_us_1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="and get \ndiscount 10%"
+        android:textSize="16sp"
+        app:fontFamily="@font/arimo_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView4"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView4"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView4" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/appCompatImageView4"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/follow_us_2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/appCompatImageView3" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView5"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/follow_us_3"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView3"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView3"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView3" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="and get \ndiscount 10%"
-                android:textSize="16sp"
-                app:fontFamily="@font/arimo_bold"
-                app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView4"
-                app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
-                app:layout_constraintStart_toStartOf="@+id/appCompatImageView4"
-                app:layout_constraintTop_toTopOf="@+id/appCompatImageView4" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView7"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/follow_us_4"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView4"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView3" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/appCompatImageView5"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/follow_us_3"
-                app:layout_constraintEnd_toEndOf="@+id/appCompatImageView3"
-                app:layout_constraintStart_toStartOf="@+id/appCompatImageView3"
-                app:layout_constraintTop_toBottomOf="@+id/appCompatImageView3" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/appCompatImageView7"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/follow_us_4"
-                app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
-                app:layout_constraintStart_toStartOf="@+id/appCompatImageView4"
-                app:layout_constraintTop_toBottomOf="@+id/appCompatImageView3" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/follow_us"
-                style="@style/green_button"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="Follow us"
-                app:layout_constraintStart_toStartOf="@+id/appCompatImageView5"
-                app:layout_constraintTop_toBottomOf="@+id/appCompatImageView5" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/follow_us"
+        style="@style/green_button"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Follow us"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView5"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

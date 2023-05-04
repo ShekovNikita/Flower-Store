@@ -28,7 +28,7 @@ class CardProductFragment : BaseFragment<FragmentCardProductBinding>() {
         breadCrumb2.setOnClickListener { navController.popBackStack() }
         breadCrumb2.text = breadCrumbSecond
 
-        val items = arrayListOf(R.drawable.alstroemeria_2, R.drawable.alstroemeria, R.drawable.alstroemeria_2,)
+        val items = arrayListOf(R.drawable.alstroemeria_2, R.drawable.alstroemeria, R.drawable.alstroemeria_3)
         viewPager2.adapter = ItemProductCardAdapter(items)
 
         TabLayoutMediator(tabLayout, viewPager2) { tab, position ->

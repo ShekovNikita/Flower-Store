@@ -39,8 +39,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/arimo"
         android:gravity="center_horizontal"
-        android:lineHeight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
+        android:lineHeight="30dp"
         android:text="Design, layout and development of applications individually for your \nbusiness"
         android:textColor="@color/color_text_main_fragment"
         android:textSize="18sp"
@@ -134,7 +134,7 @@
         app:layout_constraintEnd_toEndOf="@+id/info_about"
         app:layout_constraintTop_toTopOf="@+id/design_email" />
 
-    <com.google.android.material.materialswitch.MaterialSwitch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingHorizontal="40dp"
     android:paddingTop="50dp"
     tools:context=".fragments.DeliveryCommonFragment">
@@ -18,23 +18,122 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView9"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:tabMode="fixed"
-        app:tabTextColor="#80000000"
-        app:tabTextAppearance="@style/TabTextAppearance"
-        app:tabSelectedTextColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/btn_back"
-        />
+        android:text="Delivery"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_back" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager2"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_catalog"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tab_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/arimo_bold"
+                android:text="Delivery within the City:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arimo"
+                android:lineHeight="20dp"
+                android:text="The cost of delivery within the City is 8€.\nExpress delivery — we will deliver your order within 1-2 hours after placing it, the cost is 16€, regardless of the amount of the order.\nDelivery to the duration of the term (interval 15 minutes), the cost of the service is 12€, regardless of the amount of the order."
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView10" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arimo_bold"
+                android:layout_marginTop="20dp"
+                android:text="Delivery to City area:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView11" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arimo"
+                android:lineHeight="20dp"
+                android:text="The cost of delivery within the City area is calculated according to the tariffs of the Delivery Taxi. The final cost is agreed upon after confirmation of the order."
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView12" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arimo_bold"
+                android:layout_marginTop="20dp"
+                android:text="Delivery by Country:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView13" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arimo"
+                android:lineHeight="20dp"
+                android:text="Delivery to the regions was carried out by Post or Post at a price of 8€."
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView14" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arimo_bold"
+                android:layout_marginTop="20dp"
+                android:text="Pickup:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView15" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arimo"
+                android:lineHeight="20dp"
+                android:text="You can independently pick up the order in the Flowers and Gifts store at City, street, 14-78.\nWeekday weekends from 9:00 to 21:00."
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView16" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_catalog"
+        style="@style/green_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_buy"
+        android:text="Catalog"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

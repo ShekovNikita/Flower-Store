@@ -18,20 +18,9 @@ class DeliveryCommonFragment : BaseFragment<FragmentDeliveryCommonBinding>() {
 
     override fun FragmentDeliveryCommonBinding.onBindView(savedInstanceState: Bundle?) {
 
-        val topFragment = listOf<Fragment>(
-            DescriptionFragment(),
-            DescriptionFragment(),
-        )
-
-        val tabLayout = requireView().findViewById<TabLayout>(R.id.tab_layout)
-
-        viewPager2.adapter = FragmentStateAdapter(requireActivity(), topFragment)
-        TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
-            val list = arrayListOf("Description","Delivery")
-            tab.text = list[position]
-        }.attach()
-
         btnBack.setOnClickListener { navController.popBackStack() }
+
+        btnCatalog.setOnClickListener { navController.navigate(R.id.catalogFragment) }
     }
 
 }

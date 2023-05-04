@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="30dp"
-    android:paddingHorizontal="40dp"
     tools:context=".fragments.CardProductFragment">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/bread_crumb_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Catalog > "
         android:textColor="#80000000"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Catalog > " />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/bread_crumb_2"
@@ -40,117 +40,194 @@
         app:layout_constraintStart_toEndOf="@+id/bread_crumb_2"
         app:layout_constraintTop_toTopOf="@+id/bread_crumb_1" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager2"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bread_crumb_1" />
+        app:layout_constraintTop_toBottomOf="@id/bread_crumb_2">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="16dp"
-        android:layout_marginTop="10dp"
-        android:background="@null"
-        app:tabIndicatorHeight="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewPager2"
-        app:tabBackground="@drawable/tab_pager_selector"
-        app:tabGravity="center" />
+        <LinearLayout
+            android:id="@+id/first_constr"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/background_counter"
-        app:layout_constraintStart_toStartOf="@+id/tab_layout"
-        app:layout_constraintTop_toBottomOf="@+id/tab_layout">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/minus"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="-"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/plus"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="+"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewPager2"
+                    app:tabBackground="@drawable/tab_pager_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/counter"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:text="3"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/plus"
-            app:layout_constraintStart_toEndOf="@+id/minus"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/background_counter"
+                    app:layout_constraintStart_toStartOf="@+id/tab_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/tab_layout">
 
-    <Button
-        android:id="@+id/btn_buy"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:background="@drawable/background_buy"
-        android:text="BUY"
-        app:layout_constraintEnd_toEndOf="@+id/tab_layout"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/minus"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:text="Hint of the gift"
-        android:textAllCaps="true"
-        android:textColor="#273317"
-        android:textSize="12sp"
-        app:cornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_buy"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:strokeColor="@color/color_text_main_fragment" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/plus"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/materialTextView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Persistence: 12-14 days."
-        android:textColor="#80192509"
-        app:layout_constraintStart_toStartOf="@+id/materialButton"
-        app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/counter"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/plus"
+                        app:layout_constraintStart_toEndOf="@+id/minus"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Country: Holland"
-        android:textColor="#80192509"
-        app:layout_constraintStart_toStartOf="@+id/materialButton"
-        app:layout_constraintTop_toBottomOf="@+id/materialTextView5" />
+                <Button
+                    android:id="@+id/btn_buy"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background_buy"
+                    android:text="BUY"
+                    app:layout_constraintEnd_toEndOf="@+id/tab_layout"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/materialButton"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Hint of the gift"
+                    android:textAllCaps="true"
+                    android:textColor="#273317"
+                    android:textSize="12sp"
+                    app:cornerRadius="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/btn_buy"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                    app:strokeColor="@color/color_text_main_fragment" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Persistence: 12-14 days."
+                    android:textColor="#80192509"
+                    app:layout_constraintStart_toStartOf="@+id/materialButton"
+                    app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Country: Holland"
+                    android:textColor="#80192509"
+                    app:layout_constraintStart_toStartOf="@+id/materialButton"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#F0F0F0"
+                android:paddingHorizontal="40dp"
+                app:layout_constraintTop_toBottomOf="@id/first_constr">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arimo_bold"
+                    android:lineHeight="20sp"
+                    android:text="Description"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arimo"
+                    android:layout_marginTop="16dp"
+                    android:lineHeight="20sp"
+                    android:text="@string/description_text"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/description"
+                    tools:layout_editor_absoluteX="40dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/arimo"
+                    android:text="@string/learn_more"
+                    app:layout_constraintStart_toStartOf="@+id/materialTextView7"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView7" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/arimo_bold"
+                    android:lineHeight="20sp"
+                    android:text="@string/about_description"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView8" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
