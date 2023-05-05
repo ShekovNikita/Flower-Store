@@ -4,6 +4,8 @@ import android.os.Build.VERSION_CODES.S
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.GridLayout
+import androidx.recyclerview.widget.GridLayoutManager
 import com.sheniv.flowers.R
 import com.sheniv.flowers.adapters.CatalogAdapter
 import com.sheniv.flowers.adapters.ClickOnItem
@@ -21,6 +23,7 @@ class CatalogFragment : BaseFragment<FragmentCatalogBinding>(), ClickOnItem {
 
     override fun FragmentCatalogBinding.onBindView(savedInstanceState: Bundle?) {
 
+        recyclerCatalog.layoutManager = GridLayoutManager(requireActivity(), 2)
         recyclerCatalog.adapter = CatalogAdapter(AllCatalog().getAllCategory(), this@CatalogFragment)
 
         btnBack.setOnClickListener { navController.popBackStack() }
